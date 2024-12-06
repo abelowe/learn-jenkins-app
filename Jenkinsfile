@@ -20,10 +20,10 @@ pipeline {
                 '''
             }
         }
-        // stage('Test'){
-        //     steps{
-        //         echo 'test stage'
-        //     }
-        // }
+        stage('Test'){
+            steps{
+                sh 'test -f build/index/html'
+            }
+        }
     }
 }
